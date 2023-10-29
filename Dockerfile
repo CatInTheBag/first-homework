@@ -1,3 +1,3 @@
 FROM nginx:1.20-alpine
 LABEL authors="Cartman"
-COPY . /usr/share/nginx/htmldd
+COPY . /usr/share/nginx/html
