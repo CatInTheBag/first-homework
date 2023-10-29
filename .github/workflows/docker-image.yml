@@ -22,7 +22,7 @@ jobs:
         docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
 
     - name: build Docker image
-      run: docker build . --file Dockerfile --tag gray:latest$(date +%s)
+      run: docker build . --file Dockerfile --tag  ${{ secrets.DOCKER_USER }}/homework:latest
 
     - name: DockerHub push
       run: docker push ${{secrets.DOCKER_USER}}/homework
